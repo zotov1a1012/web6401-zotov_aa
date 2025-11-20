@@ -7,95 +7,85 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Ожидаемые фильмы 2025 года</h1>
-        <nav>
+    <div class="grid-container">
+        <header class="grid-header">
+            <h1 class="h1">Ожидаемые фильмы 2025 года</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="movies.html" class="nav__link">Фильмы</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="form.html" class="nav__link">Регистрация</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="grid-sidebar">
+            <h3 class="h3">Категории</h3>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="movies.html">Фильмы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li>Боевики</li>
+                <li>Фантастика</li>
+                <li>Драмы</li>
+                <li>Комедии</li>
+                <li>Ужасы</li>
             </ul>
-        </nav>
-    </header>
+        </aside>
 
-    <main>
-        <h2>Самые ожидаемые премьеры 2025 года</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Название фильма</th>
-                    <th>Жанр</th>
-                    <th>Дата выхода</th>
-                    <th>Режиссер</th>
-                    <th>Бюджет</th>
-                    <th>Рейтинг ожидания</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Мстители: Секретные войны</td>
-                    <td>Фантастика, Боевик</td>
-                    <td>2 мая 2025</td>
-                    <td>Дestin Дертон</td>
-                    <td>$350 млн</td>
-                    <td>9.8/10</td>
-                </tr>
-                <tr>
-                    <td>Форсаж 11</td>
-                    <td>Боевик, Криминал</td>
-                    <td>4 апреля 2025</td>
-                    <td>Луис Летеррье</td>
-                    <td>$200 млн</td>
-                    <td>8.5/10</td>
-                </tr>
-                <tr>
-                    <td>Мир Юрского периода 4</td>
-                    <td>Фантастика, Приключения</td>
-                    <td>18 июля 2025</td>
-                    <td>Дэвид Литч</td>
-                    <td>$180 млн</td>
-                    <td>8.7/10</td>
-                </tr>
-                <tr>
-                    <td>Супермен: Наследие</td>
-                    <td>Фантастика, Супергерой</td>
-                    <td>11 июля 2025</td>
-                    <td>Джеймс Ганн</td>
-                    <td>$190 млн</td>
-                    <td>9.2/10</td>
-                </tr>
-                <tr>
-                    <td>Звездные войны: Новый орден джедаев</td>
-                    <td>Фантастика, Приключения</td>
-                    <td>19 декабря 2025</td>
-                    <td>Шармин Обаид-Чиной</td>
-                    <td>$250 млн</td>
-                    <td>9.5/10</td>
-                </tr>
-                <tr>
-                    <td>Миссия невыполнима 9</td>
-                    <td>Боевик, Шпионский</td>
-                    <td>23 мая 2025</td>
-                    <td>Кристофер Маккуорри</td>
-                    <td>$170 млн</td>
-                    <td>8.9/10</td>
-                </tr>
-            </tbody>
-        </table>
+        <main class="grid-main">
+            <h2 class="h2">Самые ожидаемые премьеры 2025 года</h2>
+            
+            <table class="table">
+                <thead>
+                    <tr class="table__header">
+                        <th class="table__header-cell">Название фильма</th>
+                        <th class="table__header-cell">Жанр</th>
+                        <th class="table__header-cell">Дата выхода</th>
+                        <th class="table__header-cell">Режиссер</th>
+                        <th class="table__header-cell">Бюджет</th>
+                        <th class="table__header-cell">Рейтинг ожидания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--left">Мстители: Секретные войны</td>
+                        <td class="table__cell table__cell--left">Фантастика, Боевик</td>
+                        <td class="table__cell table__cell--center">2 мая 2025</td>
+                        <td class="table__cell table__cell--left">Дestin Дертон</td>
+                        <td class="table__cell table__cell--right">$350 млн</td>
+                        <td class="table__cell table__cell--center">9.8/10</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--left">Форсаж 11</td>
+                        <td class="table__cell table__cell--left">Боевик, Криминал</td>
+                        <td class="table__cell table__cell--center">4 апреля 2025</td>
+                        <td class="table__cell table__cell--left">Луис Летеррье</td>
+                        <td class="table__cell table__cell--right">$200 млн</td>
+                        <td class="table__cell table__cell--center">8.5/10</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--left">Мир Юрского периода 4</td>
+                        <td class="table__cell table__cell--left">Фантастика, Приключения</td>
+                        <td class="table__cell table__cell--center">18 июля 2025</td>
+                        <td class="table__cell table__cell--left">Дэвид Литч</td>
+                        <td class="table__cell table__cell--right">$180 млн</td>
+                        <td class="table__cell table__cell--center">8.7/10</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="movie-notes">
-            <h3>Интересные факты:</h3>
-            <ul>
-                <li>2025 год обещает быть рекордным по количеству блокбастеров</li>
-                <li>Несколько франшиз получат свое продолжение</li>
-                <li>Ожидается множество сюрпризов от кинокомпаний</li>
-            </ul>
-        </div>
-    </main>
+            <div class="movie-notes">
+                <h3 class="h3">Интересные факты:</h3>
+                <ul>
+                    <li>2025 год обещает быть рекордным по количеству блокбастеров</li>
+                    <li>Несколько франшиз получат свое продолжение</li>
+                    <li>Ожидается множество сюрпризов от кинокомпаний</li>
+                </ul>
+            </div>
+        </main>
 
-     <footer>
-        <p>&copy; 2025 Все права защищены</p>
-    </footer>
+        <footer class="grid-footer">
+            <p>&copy; 2025 Киномир. Все права защищены</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -7,22 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Контакты</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="movies.html">Фильмы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <h1 class="h1">Контакты</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="movies.html" class="nav__link">Фильмы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="form.html" class="nav__link">Регистрация</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Для связи:</h2>
-        <p>Email: zotov1a1012@gmail.com</p>
-        <p>Телефон: +7 (927) 686 05 84</p>
-        <p>Адрес: Самара, ул. Гагарина 159</p>
+    <main class="main">
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3 class="h3">Контактная информация</h3>
+                <p><strong>Email:</strong> zotov1a1012@gmail.com</p>
+                <p><strong>Телефон:</strong> +7 (927) 686 05 84</p>
+                <p><strong>Адрес:</strong> Самара, ул. Гагарина 159</p>
+            </div>
+            <div class="flex-item">
+                <h3 class="h3">Режим работы</h3>
+                <p><strong>Пн-Пт:</strong> 9:00 - 18:00</p>
+                <p><strong>Сб:</strong> 10:00 - 16:00</p>
+                <p><strong>Вс:</strong> Выходной</p>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Киномир. Все права защищены</p>
+    </footer>
 </body>
 </html>
