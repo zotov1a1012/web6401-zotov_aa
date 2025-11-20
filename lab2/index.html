@@ -7,27 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать в мир кино!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="movies.html">Фильмы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <h1 class="h1">Добро пожаловать в мир кино!</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="movies.html" class="nav__link">Фильмы</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="form.html" class="nav__link">Регистрация</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <section class="intro">
-            <h2>О сайте</h2>
+            <h2 class="h2">О сайте</h2>
             <p>Этот сайт посвящен миру кино. Здесь вы найдете информацию о фильмах, актерах и многом другом.</p>
-            <img src="images/cinema.jpg" alt="Кино" width="600">
+            <img src="images/cinema.jpg" alt="Кино" width="600" class="pulse">
         </section>
+
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Новости кино</h3>
+                <p>Самые свежие новости из мира кинематографа. Премьеры, кассовые сборы, интервью.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Рецензии</h3>
+                <p>Профессиональные рецензии на новые фильмы. Обзоры и оценки кинокритиков.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Трейлеры</h3>
+                <p>Эксклюзивные трейлеры и тизеры ожидаемых фильмов. Первый взгляд на новые проекты.</p>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Все права защищены</p>
+    <footer class="footer">
+        <p>&copy; 2025 Киномир. Все права защищены</p>
     </footer>
 </body>
 </html>
