@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Киномир - Регистрация</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для одинаковой ширины полей */
+        .form__input,
+        .form__select {
+            width: 100%;
+            max-width: 550px; /* Можно настроить под нужную ширину */
+            box-sizing: border-box;
+        }
+        
+        /* Для селекта (выпадающего списка) */
+        select.form__input {
+            /* Убедимся, что селект такой же ширины */
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
