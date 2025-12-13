@@ -110,12 +110,13 @@ function getOperationFn(initialValue, operatorFn) {
  * console.log(generator()); // 7
  * console.log(generator()); // 9
  */
-function sequence(start, step) {
-    let current = start - step;
-    
+
+function sequence(start = 0, step = 1) {
+    let current = start;
     return function() {
+        const value = current;
         current += step;
-        return current;
+        return value;
     };
 }
 
@@ -133,28 +134,68 @@ function sequence(start, step) {
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 33], text: 'text'}) // true
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 3], text: 'text2'}) // false
  */
+// function deepEqual(firstObject, secondObject) {
+//     // Проверка на примитивы или одинаковые ссылки
+//     if (firstObject === secondObject) return true;
+    
+//     // Проверка на null и типы
+//     if (firstObject === null || secondObject === null) return false;
+//     if (typeof firstObject !== 'object' || typeof secondObject !== 'object') return false;
+    
+//     // Получаем ключи объектов
+//     const keys1 = Object.keys(firstObject);
+//     const keys2 = Object.keys(secondObject);
+    
+//     // Проверяем количество ключей
+//     if (keys1.length !== keys2.length) return false;
+    
+//     // Проверяем каждое свойство рекурсивно
+//     for (let key of keys1) {
+//         if (!keys2.includes(key) || !deepEqual(firstObject[key], secondObject[key])) {
+//             return false;
+//         }
+//     }
+    
+//     return true;
+// }
+
 function deepEqual(firstObject, secondObject) {
-    // Проверка на примитивы или одинаковые ссылки
-    if (firstObject === secondObject) return true;
-    
-    // Проверка на null и типы
-    if (firstObject === null || secondObject === null) return false;
-    if (typeof firstObject !== 'object' || typeof secondObject !== 'object') return false;
-    
-    // Получаем ключи объектов
+    if (Number.isNaN(firstObject) && Number.isNaN(secondObject)) {
+        return true;
+    }
+
+    if (firstObject === secondObject) {
+        return true;
+    }
+
+    if (firstObject === null || secondObject === null ||
+        (typeof firstObject !== 'object' && typeof firstObject !== 'function') ||
+        (typeof secondObject !== 'object' && typeof secondObject !== 'function')) {
+        return false;
+    }
+
+    if (typeof firstObject === 'function' && typeof secondObject === 'function') {
+        return firstObject === secondObject;
+    }
+
+    if (Array.isArray(firstObject) && Array.isArray(secondObject)) {
+        if (firstObject.length !== secondObject.length) return false;
+        for (let i = 0; i < firstObject.length; i++) {
+            if (!deepEqual(firstObject[i], secondObject[i])) return false;
+        }
+        return true;
+    }
+
     const keys1 = Object.keys(firstObject);
     const keys2 = Object.keys(secondObject);
-    
-    // Проверяем количество ключей
+
     if (keys1.length !== keys2.length) return false;
-    
-    // Проверяем каждое свойство рекурсивно
-    for (let key of keys1) {
-        if (!keys2.includes(key) || !deepEqual(firstObject[key], secondObject[key])) {
-            return false;
-        }
+
+    for (const key of keys1) {
+        if (!keys2.includes(key)) return false;
+        if (!deepEqual(firstObject[key], secondObject[key])) return false;
     }
-    
+
     return true;
 }
 
